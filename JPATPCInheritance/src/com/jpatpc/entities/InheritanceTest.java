@@ -1,10 +1,11 @@
-package com.cg.entities;
+package com.jpatpc.entities;
+
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class InheritenseTest {
+public class InheritanceTest {
 
 	public static void main(String[] args) {
 		
@@ -14,16 +15,15 @@ public class InheritenseTest {
 		
 		//create one employee
 		Employee employee = new Employee();
-		employee.setName("Hemanth");
-		employee.setSalary(20000);
+		employee.setName("John");
+		employee.setSalary(5000);
 		em.persist(employee);
-
 		
 		//create one manager
 		Manager manager = new Manager();
-		manager.setName("Murali");
-		manager.setSalary(40000);
-		manager.setDepartmentName("Training");
+		manager.setName("Trisha");
+		manager.setSalary(8000);
+		manager.setDepartmentName("Sales");
 		em.persist(manager);
 		
 		
@@ -35,3 +35,4 @@ public class InheritenseTest {
 		factory.close();
 	}
 }
+
